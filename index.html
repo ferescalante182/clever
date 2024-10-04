@@ -1,0 +1,585 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clever Studio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <noscript>
+      <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+</head>
+<body class="landing is-preload">
+    <!-- Page Wrapperwererwe -->
+    <div id="page-wrapper">
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="index.html">Clever Studio</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="generic.html">Generic</a></li>
+                                <li><a href="elements.html">Elements</a></li>
+                                <li><a href="nosotras.html">Nosotras</a></li>
+                                <li><a href="portafolio.html">Portafolio</a></li>
+                                <li><a href="cursos.html">Cursos</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+
+      <!-- Banner -->
+      <section id="banner">
+        
+        <div class="inner">
+          <ul class="actions special"></ul>
+        </div>
+        <a href="#one" class="more scrolly">Hola!</a>
+      </section>
+
+     
+
+
+
+
+
+<!-- One -->
+<section id="one" class="wrapper style1 special">
+  <div class="inner" >
+    <header class="major" data-aos="fade-down" data-aos-duration="800">
+      <h2>
+        Bienvenidxs a Clever Studio.<br />
+   
+      </h2>
+      <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+        Somos un estudio de diseño compuesto por un equipo de jóvenes profesionales apasionados por el arte del rediseño y la restauración de muebles. Nuestro objetivo es crear propuestas innovadoras y únicas, que no solo capten la atención de nuestros clientes, sino que también les brinden una sensación de bienestar al admirarlos y utilizarlos. Ofreciendo siempre materiales y resultados de alta calidad.<br />
+       
+      </p>
+    </header>
+</div>    
+</section>
+    <!-- Image added here, adjust 'src' to your image path -->
+
+<!--slideshow-->
+
+<div class="slideshow-container">
+  <div class="slideshow-inner">
+      <div class="mySlides">
+          <img src="images/slider-1.png" alt="Slide 1">
+      </div>
+
+      <div class="mySlides">
+          <img src="images/slider-2.png" alt="Slide 2">
+      </div>
+
+      <div class="mySlides">
+          <img src="images/slider-3.png" alt="Slide 3">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+</div>
+
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+      showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+      showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+  }
+</script>
+
+
+
+
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var animations = [
+      'fade', 'fade-up', 'fade-down', 'fade-left', 'fade-right', 
+      'fade-up-right', 'fade-up-left', 'fade-down-right', 'fade-down-left',
+      'zoom-in', 'zoom-in-up', 'zoom-in-down', 'zoom-in-left', 'zoom-in-right',
+      'zoom-out', 'zoom-out-up', 'zoom-out-down', 'zoom-out-left', 'zoom-out-right'
+    ];
+
+    var delayRange = [50, 300]; // Min and max delay in milliseconds
+    var durationRange = [500, 1500]; // Min and max duration in milliseconds
+
+    // Get all elements within the section that have AOS attributes
+    var aosElements = document.querySelectorAll('#two [data-aos]');
+
+    aosElements.forEach(function(elem) {
+      // Assign a random animation
+      var randomAnimation = animations[Math.floor(Math.random() * animations.length)];
+      elem.setAttribute('data-aos', randomAnimation);
+
+      // Assign random delay and duration
+      var randomDelay = getRandomNumber(delayRange[0], delayRange[1]);
+      var randomDuration = getRandomNumber(durationRange[0], durationRange[1]);
+
+      elem.setAttribute('data-aos-delay', randomDelay);
+      elem.setAttribute('data-aos-duration', randomDuration);
+    });
+  });
+
+  // Helper function to get a random number within a range
+  function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+</script>
+
+
+
+
+
+<section class="wrapper style1 special" id="three">
+<h2  data-aos="fade-up">PROYECTOS DESTACADOS</h2>
+
+<div class="gallery-container" style="background-color: #ffffffba; padding: 20px; border-radius: 15px;">
+  <div class="gallery" style="align-content: center;">
+      <img src="images/grid/bancaAleJazo/baj2.jpg" alt="Image 1" onclick="openModal(1)" data-aos="fade-up">
+      <img src="images/grid/libreroNavajo/IMG_20210721_173855.jpg" alt="Image 2" onclick="openModal(2)" data-aos="fade-up" data-aos-delay="100">
+      <img src="images/grid/mesaDeMediaLuna/IMG_20210331_164738.jpg" alt="Image 3" onclick="openModal(3)" data-aos="fade-up" data-aos-delay="200">
+      <img src="images/grid/sillasJusely/DSC00300.jpg" alt="Image 4" onclick="openModal(4)" data-aos="fade-up" data-aos-delay="300">
+      <img src="images/grid/pardoCafe/IMG_20230417_135319.jpg" alt="Image 5" onclick="openModal(5)" data-aos="fade-up" data-aos-delay="400">
+      <img src="images/grid/salaMiau/IMG_20230525_154146.jpg" alt="Image 6" onclick="openModal(6)" data-aos="fade-up" data-aos-delay="500">
+      <img src="images/grid/sofaCamaAzul/IMG_20210422_115629.jpg" alt="Image 7" onclick="openModal(7)" data-aos="fade-up" data-aos-delay="600">
+      <img src="images/grid/sillaAleJazo/IMG_20230713_161625.jpg" alt="Image 8" onclick="openModal(8)" data-aos="fade-up" data-aos-delay="700">
+      <img src="images/grid/boothAmarillo/DSC00545.jpg" alt="Image 9" onclick="openModal(9)" data-aos="fade-up" data-aos-delay="800">
+    </div>
+  </div>
+
+
+<div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div id="modal-content" class="modal-content">
+        <!-- Related images will be inserted here -->
+    </div>
+</div>
+
+<script>
+  function openModal(imageIndex) {
+    const modal = document.getElementById('modal');
+    const modalContent = document.getElementById('modal-content');
+
+    // Clear previous content
+    modalContent.innerHTML = '';
+
+    // Add related images based on clicked image index
+    let relatedImages = [];
+
+    switch(imageIndex) {
+      case 1:
+        relatedImages = [
+          'images/grid/bancaAleJazo/baj1.jpg',
+          'images/grid/bancaAleJazo/baj3.jpg',
+          'images/grid/bancaAleJazo/baj5.jpg',
+          'images/grid/bancaAleJazo/baj7.jpg',
+          'images/grid/bancaAleJazo/baj10.jpg',
+        ];
+        break;
+      case 2:
+        relatedImages = [
+          'images/grid/libreroNavajo/ln-1.jpg',
+          'images/grid/libreroNavajo/ln-3.jpg',
+          'images/grid/libreroNavajo/ln-5.jpg',
+          'images/grid/libreroNavajo/ln-7.jpg',
+          'images/grid/libreroNavajo/ln-2.jpg'
+        ];
+        break;
+      case 3:
+        relatedImages = [
+          'images/grid/mesaDeMediaLuna/mml-1.jpg',
+          'images/grid/mesaDeMediaLuna/mml-2.jpg',
+          'images/grid/mesaDeMediaLuna/mml-3.jpg',
+          'images/grid/mesaDeMediaLuna/mml-5.jpg',
+          'images/grid/mesaDeMediaLuna/mml-6.jpg'
+        ];
+        break;
+      case 4:
+        relatedImages = [
+          'images/grid/sillasJusely/sj-12.jpg',
+          'images/grid/sillasJusely/sj-2.jpg',
+          'images/grid/sillasJusely/sj-4.jpg',
+          'images/grid/sillasJusely/sj-7.jpg',
+          'images/grid/sillasJusely/sj-9.jpg'
+        ];
+        break;
+      case 5:
+        relatedImages = [
+          'images/grid/pardoCafe/pardo-1.jpg',
+          'images/grid/pardoCafe/pardo-2.jpg',
+          'images/grid/pardoCafe/pardo-3.jpg',
+          'images/grid/pardoCafe/pardo-4.jpg',
+          'images/grid/pardoCafe/pardo-5.jpg'
+        ];
+        break;
+      case 6:
+        relatedImages = [
+          'images/grid/salaMiau/sm-1.jpg',
+          'images/grid/salaMiau/sm-2.jpg',
+          'images/grid/salaMiau/sm-3.jpg',
+          'images/grid/salaMiau/sm-4.jpg',
+          'images/grid/salaMiau/sm-5.jpg',
+        ];
+        break;
+      case 7:
+        relatedImages = [
+          'images/grid/sofaCamaAzul/sca-1.jpg',
+          'images/grid/sofaCamaAzul/sca-2.jpg',
+          'images/grid/sofaCamaAzul/sca-3.jpg',
+          'images/grid/sofaCamaAzul/sca-4.jpg',
+          'images/grid/sofaCamaAzul/sca-5.jpg',
+        ];
+        break;
+      case 8:
+        relatedImages = [
+          'images/grid/sillaAleJazo/saj-1.jpg',
+          'images/grid/sillaAleJazo/saj-2.jpg',
+          'images/grid/sillaAleJazo/saj-3.jpg',
+          'images/grid/sillaAleJazo/saj-4.jpg',
+          'images/grid/sillaAleJazo/saj-5.jpg',
+        ];
+        break;
+      case 9:
+        relatedImages = [
+          'images/grid/boothAmarillo/ba-1.jpg',
+          'images/grid/boothAmarillo/ba-2.jpg',
+          'images/grid/boothAmarillo/ba-3.jpg',
+          'images/grid/boothAmarillo/ba-4.jpg',
+          'images/grid/boothAmarillo/ba-5.jpg',
+        ];
+        break;
+    }
+
+    relatedImages.forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = 'Related Image';
+      modalContent.appendChild(img);
+    });
+
+    modal.style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById('modal');
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  }
+</script>
+
+</section>
+
+
+
+  
+
+
+   
+<!-- Servicios aleatorios -->
+<section id="three" class="wrapper style3 special">
+  <div class="inner">
+    <header class="major">
+      <div data-aos="fade-up-left">
+        <h2>Servicios</h2>
+      </div>
+     
+    </header>
+    <ul class="features" id="featureList">
+      <li  data-aos="fade-left" data-aos-duration="800">
+        <h3 data-aos="zoom-in" data-aos-delay="50">TAPICERÍA</h3>
+        <p data-aos="fade" data-aos-delay="100">
+          Ofrecemos servicios de tapicería para renovar y personalizar tus muebles con los mejores materiales y diseños.
+        </p>
+      </li>
+      <li c data-aos="fade-right" data-aos-duration="900" data-aos-delay="100">
+        <h3 data-aos="zoom-in" data-aos-delay="150">RESTAURACIÓN DE ACABADOS</h3>
+        <p data-aos="fade" data-aos-delay="200">
+          Renovamos los acabados de tus muebles para que luzcan como nuevos y resalten en cualquier ambiente.
+        </p>
+      </li>
+      <li  data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+        <h3 data-aos="zoom-in" data-aos-delay="250">REDISEÑO Y MODIFICACIÓN ESTRUCTURAL</h3>
+        <p data-aos="fade" data-aos-delay="300">
+          Transformamos tus muebles con diseños innovadores y cambios estructurales para mejorar su funcionalidad y estética.
+        </p>
+      </li>
+      <li  data-aos="fade-up" data-aos-duration="1100" data-aos-delay="300">
+        <h3 data-aos="zoom-in" data-aos-delay="350">FABRICACIÓN DE MUEBLES SOBRE PEDIDO</h3>
+        <p data-aos="fade" data-aos-delay="400">
+          Diseñamos y fabricamos muebles a medida para que se adapten perfectamente a tus necesidades y espacio.
+        </p>
+      </li>
+      <li  data-aos="fade-right" data-aos-duration="1200" data-aos-delay="400">
+        <h3 data-aos="zoom-in" data-aos-delay="450">CURSOS Y TALLERES DE RESTAURACIÓN DE MUEBLES</h3>
+        <p data-aos="fade" data-aos-delay="500">
+          Aprende técnicas profesionales de restauración y dale nueva vida a tus muebles en nuestros cursos y talleres.
+        </p>
+      </li>
+      <li  data-aos="fade-left" data-aos-duration="1300" data-aos-delay="500">
+        <h3 data-aos="zoom-in" data-aos-delay="550">DECORACIÓN TEMÁTICA</h3>
+        <p data-aos="fade" data-aos-delay="600">
+         Creamos ambientes únicos con decoraciones temáticas que reflejan tu estilo y personalidad.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var featureList = document.getElementById('featureList');
+    var items = Array.prototype.slice.call(featureList.children);
+
+    // Define a set of AOS animations
+    var animations = [
+      'fade', 'fade-up', 'fade-down', 'fade-left', 'fade-right', 
+      'fade-up-right', 'fade-up-left', 'fade-down-right', 'fade-down-left',
+      'flip-up', 'flip-down', 'flip-left', 'flip-right',
+      'zoom-in', 'zoom-in-up', 'zoom-in-down', 'zoom-in-left', 'zoom-in-right',
+      'zoom-out', 'zoom-out-up', 'zoom-out-down', 'zoom-out-left', 'zoom-out-right'
+    ];
+
+    // Randomly assign an AOS animation to each item
+    items.forEach(function(item) {
+      var randomAnimation = animations[Math.floor(Math.random() * animations.length)];
+      item.setAttribute('data-aos', randomAnimation);
+    });
+
+    // Shuffle and append items
+    shuffleArray(items).forEach(function(item) {
+      featureList.appendChild(item);
+    });
+  });
+
+  function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+    return array;
+  }
+</script>
+
+
+<!-- Cursos Section -->
+<section class="spotlight" id="three">
+  <!-- Smaller Fit Image -->
+  <div class="image" data-aos="zoom-in" data-aos-delay="100">
+    <span ><img src="images/Collage maker project.jpeg" alt="Curso de Restauración" /></span>
+  </div>
+
+  <!-- Content Section -->
+  <div class="content">
+    <h2 data-aos="flip-left" data-aos-delay="200">
+      ¿Quieres aprender?<br />
+      Toma uno de nuestros cursos para ser más <span class="highlight">clever</span>.
+    </h2>
+    <p data-aos="fade-up" data-aos-delay="300">
+      Si alguna vez soñaste con revivir ese mueble antiguo y darle una nueva vida, ¡esta es tu oportunidad! Aprende técnicas de restauración sin necesidad de contar con equipo especializado. No importa si eres principiante o ya tienes experiencia, este curso es para ti.
+    </p>
+    <p data-aos="fade-up" data-aos-delay="400">
+      Trae tu propio mueble y sé parte integral del proceso de restauración. Desde la preparación hasta los detalles finales, te guiaremos en cada etapa, poniendo énfasis en el diseño para crear una pieza única e irrepetible.
+    </p>
+    <p data-aos="fade-up" data-aos-delay="500">
+      Para más información, no dudes en contactarnos por correo o a través de nuestras redes sociales. ¡Estaremos encantadxs de resolver todas tus dudas y proporcionarte los detalles necesarios!
+    </p>
+
+    <!-- Call to Action Button -->
+    <ul class="actions" data-aos="fade-up" data-aos-delay="600">
+      <li><a href="cursos.html" class="button primary">¡Inscríbete ahora!</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<!--about marisol-->
+
+ 
+<section class="spotlight" id="three"  data-aos-duration="800">
+  <div class="image" data-aos="zoom-in" data-aos-delay="100">
+    <img src="images/marisol.png" alt="" />
+  </div>
+  <div class="content">
+    <h2 data-aos="flip-left" data-aos-delay="200">
+      Sobre la artista.<br />
+      Marisol Hurtado
+    </h2>
+    <p data-aos="fade-up" data-aos-delay="300">
+      Bio, historia, por que te gusta pintar muebles? 
+    </p>
+  </div>
+</section>
+
+      
+   <!-- form -->
+   <section class="wrapper style3 special">
+    
+    <h4 data-aos="fade-up">Envianos un mensaje.</h4>
+    <a aria-label="Chat on WhatsApp" href="https://wa.me/526641167699"> <img alt="Chat on WhatsApp" src="images/ChatOnWhatsAppButton/WhatsAppButtonGreenLarge.svg" />
+    </a>
+  
+</section>
+
+
+      
+
+     <!-- Footer -->
+<footer id="footer">
+  <ul class="icons">
+    <li data-aos="zoom-in" data-aos-delay="100">
+      <a href="https://www.facebook.com/profile.php?id=100092277158876&mibextid=LQQJ4d" class="icon brands fa-facebook-f" target="_blank">
+        <span class="label">Facebook</span>
+      </a>
+    </li>
+    <li data-aos="zoom-in" data-aos-delay="200">
+      <a href="https://www.instagram.com/cleverstudio.mx/" class="icon brands fa-instagram" target="_blank">
+        <span class="label">Instagram</span>
+      </a>
+    </li>
+    
+    <li data-aos="zoom-in" data-aos-delay="300">
+      <a href="#" class="icon solid fa-envelope">
+        <span class="label">Email</span>
+      </a>
+    </li>
+  </ul>
+  <ul class="copyright">
+    <li>&copy; Clever Studio.</li>
+    <li>
+      Un sitio hecho por
+      <a href="http://timeless-digital.com " target="_blank">Timeless Digital</a>
+    </li>
+  </ul>
+</footer>
+
+
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <script>
+      AOS.init();
+    </script>
+   
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  window.plusSlides = function(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  window.currentSlide = function(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+});
+
+   </script>
+
+    
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      let gridContainer = document.querySelector('.grid-container');
+      let gridItems = Array.from(gridContainer.children);
+      
+      // Shuffle the grid items
+      for (let i = gridItems.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [gridItems[i], gridItems[j]] = [gridItems[j], gridItems[i]];
+      }
+
+      // Clear the container and re-append the items in the new order
+      gridContainer.innerHTML = "";
+      gridItems.forEach(item => gridContainer.appendChild(item));
+  });
+</script>
+    
+<!-- Start of OpenWidget (www.openwidget.com) code -->
+<script>
+  window.__ow = window.__ow || {};
+  window.__ow.organizationId = "eb1639bb-0ea8-4d10-a85f-fc48b9ab9dd9";
+  window.__ow.integration_name = "manual_settings";
+  window.__ow.product_name = "openwidget";
+  ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[OpenWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.openwidget.com/openwidget.js",t.head.appendChild(n)}};!n.__ow.asyncInit&&e.init(),n.OpenWidget=n.OpenWidget||e}(window,document,[].slice))
+</script>
+<noscript>You need to <a href="https://www.openwidget.com/enable-javascript" rel="noopener nofollow">enable JavaScript</a> to use the communication tool powered by <a href="https://www.openwidget.com/" rel="noopener nofollow" target="_blank">OpenWidget</a></noscript>
+<!-- End of OpenWidget code -->
+
+</body>
+</html>
+
